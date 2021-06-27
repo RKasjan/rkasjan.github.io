@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kursy PIAC</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+<ul class="Header-links-ul mt-2">
+<li class="header-link" onclick="location.href='index.html'">Strona główna</li>
+<li class="header-link" onclick="location.href='kursy.html'">Kursy</li>
+<li class="header-link" onclick="location.href='kontakt.html'">Kontakt</li>
+</ul>
+</header>
+<div class="container">
+<main>
+    <section class="mb-4">
+        <h2 class="h1-responsive font-weight-bold text-center my-4">Kontakt</h2>
+        <p class="text-center w-responsive mx-auto mb-5">Masz pytania? Napisz do nas!</p>
+        <div class="row mx-auto">
+            <div class="col-md-12 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="name" class="form-control">
+                                <label for="name" class="">Imię</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="email" name="email" class="form-control">
+                                <label for="email" class="">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="subject" name="subject" class="form-control">
+                                <label for="subject" class="">Temat</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="message">Wiadmość</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center text-md-left mt-2">
+                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Wyślij</a>
+                </div>
+                <div class="status"></div>
+            </div>
+        </div>
+    </section>
+</main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
